@@ -1,0 +1,56 @@
+@Tutorial(time: 10) {
+    @Intro(title: "Create Skeleton View") {
+    }
+    
+    @Section(title: "Add a customization view") {
+        @ContentAndMedia(layout:horizontal) {
+            Add the ability for users to customize calendar
+        }
+        
+        @Steps {
+            
+            @Step {
+                Create a new SwiftUI View file named `OBCalendarDemo.swift` 
+                @Code(name:"OBCalendarDemo.swift",
+                      file:c1-t2-s1-step1.swift) {
+                    @Image(source: c1-t2-s1-step1.png, alt: "desc")
+                }
+            }
+            
+            @Step {
+                import `ObiletCalendar`
+                @Code(name:"OBCalendarDemo.swift",
+                    file:c1-t2-s1-step2.swift)  {
+                    @Image(source: c1-t2-s1-step2.png, alt: "desc")
+                }
+            }
+            
+            @Step {
+                OBCalendar has 2 initializer. ``OBCalendar/init(years:lazyYears:lazyMonths:lazyDays:dayContent:monthContent:yearContent:)`` and ``OBCalendar/init(calendar:startingDate:endingDate:lazyYears:lazyMonths:lazyDays:dayContent:monthContent:yearContent:)`` 
+                Use to initializer that you want use.
+                If you set only startDate and endDate, initializer some run code blocks and return array of ``CalendarModel/Year``. 
+                @Code(name:"OBCalendarDemo.swift",
+                    file:c1-t2-s1-step3.swift)  {
+                    @Image(source: c1-t2-s1-step3.png, alt: "desc")
+                }
+            }
+            @Step {
+                Set frame every day's
+                @Code(name:"OBCalendarDemo.swift",
+                    file:c1-t2-s1-step4.swift)  {
+                    @Image(source: c1-t2-s1-step4.png, alt: "desc")
+                }
+            } 
+            @Step {
+                Months area is not clear.
+                Add `Month name` and `Year` to `monthsView` top and add `Divider`
+                @Code(name:"OBCalendarDemo.swift",
+                    file:c1-t2-s1-step5.swift)  {
+                    @Image(source: c1-t2-s1-step5.png, alt: "desc")
+                }
+            }
+            
+        }
+    }
+    
+}

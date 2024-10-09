@@ -1,0 +1,40 @@
+@Tutorial(time: 15) {
+    @Intro(title: "Change Day View ") {
+        Change view of `day` by [Date Type](doc:ObiletCalendar/CalendarModel/Day/DateType) and [Range Type](doc:ObiletCalendar/CalendarModel/Day/RangeType) 
+<!--        @Image(source: <#file#>, alt: "<#accessible description#>")-->
+    }
+    
+    @Section(title: "Change") {
+        @ContentAndMedia {
+            Text
+<!--            @Image(source: <#file#>, alt: "<#accessible description#>")-->
+        }
+        
+        @Steps {
+            @Step {
+                Look at latest state of previous tutorial
+                
+                @Code(name:"OBCalendarDemo.swift",
+                    file:c2-t2-s1-step1.swift)  {
+                    @Image(source: c2-t2-s1-step1.png, alt: "desc")
+                }
+            }  
+            @Step {
+                If day is in [outOfRange](doc://ObiletCalendar/CalendarModel/Day/RangeType/) and [dateType](doc://ObiletCalendar/CalendarModel/Day/DateType) of `day` is [currentMonth](doc://ObiletCalendar/CalendarModel/Day/DateType/currentMonth), change foregroundColor as gray otherwise dont show `day`.
+                
+                @Code(name:"OBCalendarDemo.swift",
+                    file:c2-t2-s1-step2.swift)  {
+                    @Image(source: c2-t2-s1-step2.png, alt: "desc")
+                }
+            } 
+            @Step {
+                If day is in [insideRange](doc://ObiletCalendar/CalendarModel/Day/RangeType/) and [dateType](doc://ObiletCalendar/CalendarModel/Day/DateType) of `day` is [currentMonth](doc://ObiletCalendar/CalendarModel/Day/DateType/currentMonth), change foregroundColor as black otherwise dont show `day`.
+                
+                @Code(name:"OBCalendarDemo.swift",
+                    file:c2-t2-s1-step3.swift)  {
+                    @Image(source: c2-t2-s1-step3.png, alt: "desc")
+                }
+            } 
+        }
+    }
+}
