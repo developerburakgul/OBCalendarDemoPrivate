@@ -7,19 +7,15 @@
 
 import SwiftUI
 import ObiletCalendar
+
 struct OBCalendarDemo: View {
-    
-    let years: [CalendarModel.Year] = {
-        let nineOctoberDateComponents = DateComponents(year: 2024,month: 10,day: 9)
-        let nineOctober = Calendar.current.date(from: nineOctoberDateComponents)!
-        let nextYear = Calendar.current.date(byAdding: .year, value: 1, to: nineOctober)
-        return CalendarModelBuilder.defaultLayout(
-            startingDate: nineOctober,
-            endingDate: nextYear!
-        )
-    }()
-    
+    @State var localeIdentifier: String
     @State var selectedDate: Date?
+    
+    init(localeIdentifier: String = "en_US") {
+        self.localeIdentifier = localeIdentifier
+    }
+    
     var body: some View {
         VStack {
             Spacer()
@@ -54,7 +50,7 @@ struct OBCalendarDemo: View {
     }
     
     var weekdaysView: some View {
-        let weekdays = getShortLocalizedWeekdays()
+        let weekdays = getShortLocalizedWeekdays(for: localeIdentifier)
         return HStack {
             ForEach(weekdays.indices, id: \.self) { index in
                 Text(weekdays[index])
@@ -64,7 +60,17 @@ struct OBCalendarDemo: View {
     }
     
     var calendarView: some View {
-        OBCalendar(years: years) { model, proxy in
+        let nineOctoberDateComponents = DateComponents(year: 2024, month: 10, day: 9)
+        let nineOctober = Calendar.current.date(from: nineOctoberDateComponents)!
+        let nextYear = Calendar.current.date(byAdding: .year, value: 1, to: nineOctober)!
+        let calendar = getCalendar(for: localeIdentifier)
+        
+        let years: [CalendarModel.Year] = CalendarModelBuilder.defaultLayout(
+            calendar: calendar,
+            startingDate: nineOctober,
+            endingDate: nextYear
+        )
+        return OBCalendar(years: years) { model, proxy in
             // Day View goes here
             let day = model.day
             ZStack {
@@ -93,17 +99,17 @@ struct OBCalendarDemo: View {
                     Circle()
                         .foregroundColor(.green)
                 }
-
+                
+                
             })
             .onTapGesture {
                 selectedDate = day.date
             }
-            
         } monthContent: { model, proxy, daysView in
             // Month View goes here
             VStack {
                 HStack {
-                    Text(getMonthName(from: model.month.month))
+                    Text(getMonthName(from: model.month.month,by: localeIdentifier))
                     Text(formatYear(model.year.year))
                 }
                 Divider()
@@ -116,18 +122,19 @@ struct OBCalendarDemo: View {
         }
     }
     
+    private func getCalendar(for localeIdentifier: String) -> Calendar {
+        var calendar = Calendar.current
+        calendar.locale = Locale(identifier: localeIdentifier)
+        return calendar
+    }
+    
     func formatYear(_ year: Int) -> String {
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .none
         return numberFormatter.string(from: NSNumber(value: year)) ?? ""
     }
     
-    func makeDate(from month: Int) -> Date {
-        let components = DateComponents(month: month)
-        return Calendar.current.date(from: components) ?? Date()
-    }
-    
-    func getMonthName(from month: Int, localeIdentifier: String = Locale.current.identifier) -> String {
+    func getMonthName(from month: Int, by: String) -> String {
         let date = makeDate(from: month)
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: localeIdentifier)
@@ -135,32 +142,24 @@ struct OBCalendarDemo: View {
         return dateFormatter.string(from: date)
     }
     
-    func getShortLocalizedWeekdays(for localeIdentifier: String = Locale.current.identifier) -> [String] {
-        // Create a Locale object from the localeIdentifier string
-        let locale = Locale(identifier: localeIdentifier)
-        
-        // Use the default calendar and set the locale
-        var calendar = Calendar.current
-        calendar.locale = locale
-        
-        // Get the index of the first weekday (e.g., Sunday = 1, Monday = 2)
-        let firstWeekday = calendar.firstWeekday
-        
-        // Get the localized short names of the weekdays (e.g., "Mon", "Tue", "Wed")
-        let shortWeekdays = calendar.shortWeekdaySymbols
-        
-        // Rearrange the weekdays starting from the first weekday
-        let firstWeekdayIndex = firstWeekday - 1 // Adjust because firstWeekday is 1-based
-        let reorderedShortWeekdays = Array(shortWeekdays[firstWeekdayIndex...]) + Array(shortWeekdays[..<firstWeekdayIndex])
-        
-        // Return the reordered short weekday names
-        return reorderedShortWeekdays
+    func makeDate(from month: Int) -> Date {
+        let components = DateComponents(month: month)
+        return Calendar.current.date(from: components) ?? Date()
     }
+    
+    func getShortLocalizedWeekdays(for localeIdentifier: String) -> [String] {
+        var calendar = Calendar.current
+        calendar.locale = Locale(identifier: localeIdentifier)
+        let firstWeekday = calendar.firstWeekday
+        let shortWeekdays = calendar.shortWeekdaySymbols
+        let firstWeekdayIndex = firstWeekday - 1
+        return Array(shortWeekdays[firstWeekdayIndex...]) + Array(shortWeekdays[..<firstWeekdayIndex])
+    }
+    
 }
 
 
 #Preview {
     OBCalendarDemo()
 }
-
 

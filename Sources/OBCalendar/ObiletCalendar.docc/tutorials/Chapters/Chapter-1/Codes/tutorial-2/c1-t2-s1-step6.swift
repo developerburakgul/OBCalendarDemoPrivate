@@ -41,15 +41,7 @@ struct OBCalendarDemo: View {
             .frame(width: 35, height: 35)
         } monthContent: { model, proxy, daysView in
             // Month View goes here
-            VStack {
-                HStack {
-                    Text(getMonthName(from: model.month.month,by: localeIdentifier))
-                    Text(formatYear(model.year.year))
-                }
-                Divider()
-                daysView
-            }
-            
+            daysView
         } yearContent: { model, proxy, monthsView in
             // Year view goes here
             monthsView
@@ -60,25 +52,6 @@ struct OBCalendarDemo: View {
         var calendar = Calendar.current
         calendar.locale = Locale(identifier: localeIdentifier)
         return calendar
-    }
-    
-    func formatYear(_ year: Int) -> String {
-        let numberFormatter = NumberFormatter()
-        numberFormatter.numberStyle = .none
-        return numberFormatter.string(from: NSNumber(value: year)) ?? ""
-    }
-    
-    func getMonthName(from month: Int, by: String) -> String {
-        let date = makeDate(from: month)
-        let dateFormatter = DateFormatter()
-        dateFormatter.locale = Locale(identifier: localeIdentifier)
-        dateFormatter.dateFormat = "MMMM"
-        return dateFormatter.string(from: date)
-    }
-    
-    func makeDate(from month: Int) -> Date {
-        let components = DateComponents(month: month)
-        return Calendar.current.date(from: components) ?? Date()
     }
     
 }

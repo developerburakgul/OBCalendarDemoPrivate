@@ -9,16 +9,12 @@ import SwiftUI
 import ObiletCalendar
 
 struct OBCalendarDemo: View {
+    @State var localeIdentifier: String
     
-    let years: [CalendarModel.Year] = {
-        let nineOctoberDateComponents = DateComponents(year: 2024,month: 10,day: 9)
-        let nineOctober = Calendar.current.date(from: nineOctoberDateComponents)!
-        let nextYear = Calendar.current.date(byAdding: .year, value: 1, to: nineOctober)
-        return CalendarModelBuilder.defaultLayout(
-            startingDate: nineOctober,
-            endingDate: nextYear!
-        )
-    }()
+    init(localeIdentifier: String = "en_US") {
+        self.localeIdentifier = localeIdentifier
+    }
+    
     var body: some View {
         VStack {
             calendarView
@@ -27,46 +23,34 @@ struct OBCalendarDemo: View {
     }
     
     var calendarView: some View {
-        OBCalendar(years: years) { model, proxy in
+        let nineOctoberDateComponents = DateComponents(year: 2024, month: 10, day: 9)
+        let nineOctober = Calendar.current.date(from: nineOctoberDateComponents)!
+        let nextYear = Calendar.current.date(byAdding: .year, value: 1, to: nineOctober)!
+        let calendar = getCalendar(for: localeIdentifier)
+        
+        let years: [CalendarModel.Year] = CalendarModelBuilder.defaultLayout(
+            calendar: calendar,
+            startingDate: nineOctober,
+            endingDate: nextYear
+        )
+        return OBCalendar(years: years) { model, proxy in
             // Day View goes here
-            ZStack {
-                Text("\(model.day.day)")
-            }
-            .frame(width: 35, height: 35)
+            Text("\(model.day.day)")
         } monthContent: { model, proxy, daysView in
             // Month View goes here
-            VStack {
-                HStack {
-                    Text(getMonthName(from: model.month.month))
-                    Text(formatYear(model.year.year))
-                }
-                Divider()
-                daysView
-            }
-            
+            daysView
         } yearContent: { model, proxy, monthsView in
             // Year view goes here
             monthsView
         }
     }
-    func formatYear(_ year: Int) -> String {
-        let numberFormatter = NumberFormatter()
-        numberFormatter.numberStyle = .none
-        return numberFormatter.string(from: NSNumber(value: year)) ?? ""
+    
+    private func getCalendar(for localeIdentifier: String) -> Calendar {
+        var calendar = Calendar.current
+        calendar.locale = Locale(identifier: localeIdentifier)
+        return calendar
     }
     
-    func makeDate(from month: Int) -> Date {
-        let components = DateComponents(month: month)
-        return Calendar.current.date(from: components) ?? Date()
-    }
-    
-    func getMonthName(from month: Int, localeIdentifier: String = Locale.current.identifier) -> String {
-        let date = makeDate(from: month)
-        let dateFormatter = DateFormatter()
-        dateFormatter.locale = Locale(identifier: localeIdentifier)
-        dateFormatter.dateFormat = "MMMM"
-        return dateFormatter.string(from: date)
-    }
 }
 
 

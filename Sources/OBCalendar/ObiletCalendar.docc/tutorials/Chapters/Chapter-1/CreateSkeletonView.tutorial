@@ -24,29 +24,47 @@
                     @Image(source: c1-t2-s1-step2.png, alt: "desc")
                 }
             }
-            
             @Step {
-                OBCalendar has 2 initializer. ``OBCalendar/init(years:lazyYears:lazyMonths:lazyDays:dayContent:monthContent:yearContent:)`` and ``OBCalendar/init(calendar:startingDate:endingDate:lazyYears:lazyMonths:lazyDays:dayContent:monthContent:yearContent:)`` 
-                Use to initializer that you want use.
-                If you set only startDate and endDate, initializer some run code blocks and return array of ``CalendarModel/Year``. 
+                Add `localeIdentifier` variable to create calendar based on `localeIdentifier` and use it.
+                
+                Get it in `Init`function and it's `en_US` as default
                 @Code(name:"OBCalendarDemo.swift",
                     file:c1-t2-s1-step3.swift)  {
                     @Image(source: c1-t2-s1-step3.png, alt: "desc")
+                }
+            }   
+            @Step {
+                Add `getCalendar(for:)` function to create `Calendar`
+                
+                @Code(name:"OBCalendarDemo.swift",
+                    file:c1-t2-s1-step4.swift)  {
+                    @Image(source: c1-t2-s1-step4.png, alt: "desc")
+                }
+            }
+            
+            @Step {
+                OBCalendar has 2 initializer. [init](doc:OBCalendar/init\(years:lazyYears:lazyMonths:lazyDays:dayContent:monthContent:yearContent:\)) and [init](doc:OBCalendar/init\(calendar:startingDate:endingDate:lazyYears:lazyMonths:lazyDays:dayContent:monthContent:yearContent:\))
+                
+                Use to initializer that you want use.
+                If you set only startDate and endDate, initializer some run code blocks and return array of ``CalendarModel/Year``. 
+                @Code(name:"OBCalendarDemo.swift",
+                    file:c1-t2-s1-step5.swift)  {
+                    @Image(source: c1-t2-s1-step5.png, alt: "desc")
                 }
             }
             @Step {
                 Set frame every day's
                 @Code(name:"OBCalendarDemo.swift",
-                    file:c1-t2-s1-step4.swift)  {
-                    @Image(source: c1-t2-s1-step4.png, alt: "desc")
+                    file:c1-t2-s1-step6.swift)  {
+                    @Image(source: c1-t2-s1-step6.png, alt: "desc")
                 }
             } 
             @Step {
                 Months area is not clear.
                 Add `Month name` and `Year` to `monthsView` top and add `Divider`
                 @Code(name:"OBCalendarDemo.swift",
-                    file:c1-t2-s1-step5.swift)  {
-                    @Image(source: c1-t2-s1-step5.png, alt: "desc")
+                    file:c1-t2-s1-step7.swift)  {
+                    @Image(source: c1-t2-s1-step7.png, alt: "desc")
                 }
             }
             
