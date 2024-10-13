@@ -20,7 +20,8 @@
                 }
             }  
             @Step {
-                If day is in [outOfRange](doc://ObiletCalendar/CalendarModel/Day/RangeType/) and [dateType](doc://ObiletCalendar/CalendarModel/Day/DateType) of `day` is [currentMonth](doc://ObiletCalendar/CalendarModel/Day/DateType/currentMonth), change foregroundColor as gray otherwise dont show `day`.
+                
+                If day is in [insideRange](doc://ObiletCalendar/CalendarModel/Day/RangeType-swift.enum/insideRange\(_:\)) and [dateType](doc://ObiletCalendar/CalendarModel/Day/DateType) of `day` is [currentMonth](doc://ObiletCalendar/CalendarModel/Day/DateType/currentMonth), show view of `day` otherwise dont show.
                 
                 @Code(name:"OBCalendarDemo.swift",
                     file:c2-t2-s1-step2.swift)  {
@@ -28,7 +29,7 @@
                 }
             } 
             @Step {
-                If day is in [insideRange](doc://ObiletCalendar/CalendarModel/Day/RangeType/) and [dateType](doc://ObiletCalendar/CalendarModel/Day/DateType) of `day` is [currentMonth](doc://ObiletCalendar/CalendarModel/Day/DateType/currentMonth), change foregroundColor as black otherwise dont show `day`.
+                If day is in [insideRange](doc://ObiletCalendar/CalendarModel/Day/RangeType-swift.enum/insideRange\(_:\)) and [dateType](doc://ObiletCalendar/CalendarModel/Day/DateType) of `day` is [currentMonth](doc://ObiletCalendar/CalendarModel/Day/DateType/currentMonth) and date of `day` less than today  , change foregroundColor as gray otherwise show day's foreground as black.
                 
                 @Code(name:"OBCalendarDemo.swift",
                     file:c2-t2-s1-step3.swift)  {

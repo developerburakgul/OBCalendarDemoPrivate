@@ -24,7 +24,8 @@
         
         @Image(source: OBCalendarIcon, alt: "desc")
         
-        @TutorialReference(tutorial: "doc:ImplementationDateSelection")
+        @TutorialReference(tutorial: "doc:ImplementSingleDateSelection")
+        @TutorialReference(tutorial: "doc:RefactorImplementSingleDateSelection")
     }
 }
 

@@ -16,12 +16,44 @@ struct OBCalendarDemo: View {
         self.calendar = calendar
         self.years = Self.getYears(from: calendar)
     }
-        
+    
     var body: some View {
         VStack {
+            Spacer()
+            headerView
+                .fixedSize(horizontal: false, vertical: true)
+                .padding(16)
+            
+            daysView
+                .padding(8)
             calendarView
+                .padding(4)
         }
-        .padding()
+        
+    }
+    var headerView: some View {
+        HStack {
+            Image(systemName: "calendar")
+            Text("Departure Date")
+            Spacer()
+            Divider()
+                .frame(width: 1)
+                .background(Color.black)
+            Image(systemName: "checkmark")
+            Text("APPLY")
+        }
+                
+    }
+    
+    var daysView: some View {
+        let days = getShortLocalizedWeekdays(for: calendar)
+        return HStack {
+            ForEach(days.indices, id: \.self) { index in
+                Text(days[index])
+                    .frame(maxWidth: .infinity)
+            }
+        }
+        
     }
     
     var calendarView: some View {
@@ -39,11 +71,11 @@ struct OBCalendarDemo: View {
                 Divider()
                 daysView
             }
+            .padding(4)
         } yearContent: { model, scrollProxy, monthsView in
             // Year View goes here
             monthsView
         }
-
     }
     
     func formatYear(_ year: Int) -> String {
@@ -66,7 +98,21 @@ struct OBCalendarDemo: View {
         dateFormatter.dateFormat = "MMMM"
         return dateFormatter.string(from: date)
     }
-
+    
+    func getShortLocalizedWeekdays(
+        for calendar: Calendar
+    ) -> [String] {
+        let firstWeekday = calendar.firstWeekday
+        
+        let shortWeekdays = calendar.shortWeekdaySymbols
+        let firstWeekdayIndex = firstWeekday - 1
+        
+        let reorderedShortWeekdays = Array(shortWeekdays[firstWeekdayIndex...])
+        + Array(shortWeekdays[..<firstWeekdayIndex])
+        
+        return reorderedShortWeekdays
+    }
+    
 }
 
 private extension OBCalendarDemo {
@@ -109,12 +155,8 @@ private extension OBCalendarDemo {
     }
 }
 
-
-
-
 #Preview {
     var calendar = Calendar.current
     calendar.locale = Locale(identifier: "en_US")
     return OBCalendarDemo(calendar: calendar)
 }
-

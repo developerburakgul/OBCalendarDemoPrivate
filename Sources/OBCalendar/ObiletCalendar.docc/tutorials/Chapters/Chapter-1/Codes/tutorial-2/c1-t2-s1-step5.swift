@@ -9,12 +9,14 @@ import SwiftUI
 import ObiletCalendar
 
 struct OBCalendarDemo: View {
-    @State var localeIdentifier: String
+    let years: [CalendarModel.Year]
+    let calendar: Calendar
     
-    init(localeIdentifier: String = "en_US") {
-        self.localeIdentifier = localeIdentifier
+    init(calendar: Calendar) {
+        self.calendar = calendar
+        self.years = Self.getYears(from: calendar)
     }
-    
+        
     var body: some View {
         VStack {
             calendarView
@@ -23,38 +25,67 @@ struct OBCalendarDemo: View {
     }
     
     var calendarView: some View {
-        let nineOctoberDateComponents = DateComponents(year: 2024, month: 10, day: 9)
-        let nineOctober = Calendar.current.date(from: nineOctoberDateComponents)!
-        let nextYear = Calendar.current.date(byAdding: .year, value: 1, to: nineOctober)!
-        let calendar = getCalendar(for: localeIdentifier)
-        
-        let years: [CalendarModel.Year] = CalendarModelBuilder.defaultLayout(
-            calendar: calendar,
-            startingDate: nineOctober,
-            endingDate: nextYear
-        )
-        return OBCalendar(years: years) { model, proxy in
+        OBCalendar(years: years) { model, scrollProxy in
             // Day View goes here
             Text("\(model.day.day)")
-        } monthContent: { model, proxy, daysView in
+        } monthContent: { model, scrollProxy, daysView in
             // Month View goes here
             daysView
-        } yearContent: { model, proxy, monthsView in
-            // Year view goes here
+        } yearContent: { model, scrollProxy, monthsView in
+            // Year View goes here
             monthsView
         }
+
+    }
+
+}
+
+private extension OBCalendarDemo {
+    static func getYears(from calendar: Calendar) -> [CalendarModel.Year] {
+        let elevenOctoberDateComponents = DateComponents(year: 2024, month: 10, day: 11)
+        let elevenOctober = Calendar.current.date(from: elevenOctoberDateComponents)!
+        
+        let startingDayOfMonth = Self.getStartDayOfMonth(from: elevenOctober, calendar: calendar)
+        let nextYear = calendar.date(byAdding: .year, value: 1, to: startingDayOfMonth)!
+        let endingDayOfMonth = Self.getEndDayOfMonth(from: nextYear, calendar: calendar)
+        
+        return CalendarModelBuilder.defaultLayout(
+            calendar: calendar,
+            startingDate: startingDayOfMonth,
+            endingDate: endingDayOfMonth
+        )
     }
     
-    private func getCalendar(for localeIdentifier: String) -> Calendar {
-        var calendar = Calendar.current
-        calendar.locale = Locale(identifier: localeIdentifier)
-        return calendar
+    static func getStartDayOfMonth(from date: Date, calendar: Calendar) -> Date {
+        let startDateComponents = DateComponents(
+            year: calendar.component(.year, from: date),
+            month: calendar.component(.month, from: date),
+            day: 1
+        )
+        return calendar.date(from: startDateComponents) ?? Date()
     }
     
+    static func getEndDayOfMonth(from date: Date, calendar: Calendar) -> Date {
+        
+        if let range = calendar.range(of: .day, in: .month, for: date) {
+            let lastDay = range.count
+            let endDateComponents = DateComponents(
+                year: calendar.component(.year, from: date),
+                month: calendar.component(.month, from: date),
+                day: lastDay
+            )
+            return calendar.date(from: endDateComponents) ?? Date()
+        }
+        return Date()
+    }
 }
 
 
+
+
 #Preview {
-    OBCalendarDemo()
+    var calendar = Calendar.current
+    calendar.locale = Locale(identifier: "en_US")
+    return OBCalendarDemo(calendar: calendar)
 }
 

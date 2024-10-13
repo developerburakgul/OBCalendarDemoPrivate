@@ -21,50 +21,32 @@
                 }
             } 
             @Step {
-                Add `weekdaysView` and `getShortLocalizedWeekdays function` and use it
+                Add `daysView` and `getShortLocalizedWeekdays` function and use it
                 
                 @Code(name:"OBCalendarDemo.swift",
                     file:c2-t1-s1-step2.swift)  {
                     @Image(source: c2-t1-s1-step2.png, alt: "desc")
                 }
             }
-        }
-    }   
-    @Section(title: "Add header view") {
-        @ContentAndMedia {
-            Create header view and add.
-<!--            @Image(source: <#file#>, alt: "<#accessible description#>")-->
-        }
-        
-        @Steps {
-            @Step {
-                Look at latest state of previous section
-                
-                @Code(name:"OBCalendarDemo.swift",
-                    file:c2-t1-s2-step1.swift)  {
-                    @Image(source: c2-t1-s2-step1.png, alt: "desc")
-                }
-            }
             @Step {
                 Add `headerView` and use it
                 
                 @Code(name:"OBCalendarDemo.swift",
-                    file:c2-t1-s2-step2.swift)  {
-                    @Image(source: c2-t1-s2-step2.png, alt: "desc")
+                    file:c2-t1-s1-step3.swift)  {
+                    @Image(source: c2-t1-s1-step3.png, alt: "desc")
+                }
+            }
+            @Step {
+                Change background color of `headerView`, add shadow to `daysView` and do some changes
+                
+                @Code(name:"OBCalendarDemo.swift",
+                    file:c2-t1-s1-step4.swift)  {
+                    @Image(source: c2-t1-s1-step4.png, alt: "desc")
                 }
             }
             
-            @Step {
-                Change background color of `headerView`, add shadow to `weekdaysView` and do some changes
-                
-                @Code(name:"OBCalendarDemo.swift",
-                    file:c2-t1-s2-step3.swift)  {
-                    @Image(source: c2-t1-s2-step3.png, alt: "desc")
-                }
-            } 
-            
         }
-    }
+    }   
         
 
     
