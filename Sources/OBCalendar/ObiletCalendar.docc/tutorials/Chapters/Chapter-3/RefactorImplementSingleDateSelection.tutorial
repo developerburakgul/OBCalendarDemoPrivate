@@ -1,0 +1,57 @@
+@Tutorial(time: 20 ) {
+    @Intro(title: "Refactor Implement Single Date Selection") {
+        In future , will shown double selection so refactor this code.
+        
+<!--        @Image(source: <#file#>, alt: "<#accessible description#>")-->
+    }
+    
+    @Section(title: "IDK") {
+        @ContentAndMedia {
+            IDK Detail
+            
+<!--            @Image(source: <#file#>, alt: "<#accessible description#>")-->
+        }
+        
+        @Steps {
+            @Step {
+                Look at latest state of previous tutorial
+                
+                @Code(name:"OBCalendarDemo.swift",
+                    file:c3-t2-s1-step1.swift)
+            }
+            
+            @Step {
+                Create helper `contentBuilder` function
+                
+                @Code(name: "OBCalendarDemo.swift", file: c3-t2-s1-step2.swift)
+            }
+            
+            @Step {
+                Create helper `modifyDayView` function that takes [model](doc://ObiletCalendar/CalendarModel/Day) as parameter
+                
+                @Code(name: "OBCalendarDemo.swift", file: c3-t2-s1-step3.swift)
+            }
+
+            @Step {
+                Use `modifyDayView` function
+                
+                @Code(name: "OBCalendarDemo.swift", file: c3-t2-s1-step4.swift)
+            } 
+            @Step {
+                Move determining background color to `modifyDayView`
+                
+                @Code(name: "OBCalendarDemo.swift", file: c3-t2-s1-step5.swift)
+            } 
+            @Step {
+                Create `selectDate(of:)` function and use it in `onTapGesture`
+                
+                @Code(name: "OBCalendarDemo.swift", file: c3-t2-s1-step6.swift)
+            } 
+            @Step {
+                Delete `today`, `dayDate` and `ZStack`
+                
+                @Code(name: "OBCalendarDemo.swift", file: c3-t2-s1-step7.swift)
+            }
+        }
+    }
+}
