@@ -26,6 +26,15 @@
         
         @TutorialReference(tutorial: "doc:ImplementSingleDateSelection")
         @TutorialReference(tutorial: "doc:RefactorImplementSingleDateSelection")
+        @TutorialReference(tutorial: "doc:ImplementDoubleDateSelection")
+    }  
+    @Chapter(name: "Implement Special Day View") {
+        Implement Special Day View
+        
+        @Image(source: OBCalendarIcon, alt: "desc")
+        
+       
+        @TutorialReference(tutorial: "doc:ImplementSpecialDay")
     }
 }
 
