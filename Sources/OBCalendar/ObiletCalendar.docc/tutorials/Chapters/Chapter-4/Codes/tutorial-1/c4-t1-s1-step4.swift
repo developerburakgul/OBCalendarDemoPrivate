@@ -67,12 +67,18 @@ struct OBCalendarWithSpecialDay: View {
         OBCalendar(years: years) { model, scrollProxy in
             // Day View goes here
             let day = model.day
-            
-            modifyDayView(model: day) {
-                Text("\(day.day)")
-                    .frame(width: 35, height: 35)
+            let dayView = Text("\(day.day)")
+                .frame(height: 35)
+                .frame(maxWidth: .infinity)
+                .padding(.vertical,4)
+                
+            let modifiedDayView = modifyDayView(model: day) {
+                dayView
             }
             
+            modifySpecialDayView(model: day) {
+                modifiedDayView
+            }
             
         } monthContent: { model, scrollProxy, daysView in
             // Month View goes here
@@ -151,7 +157,6 @@ struct OBCalendarWithSpecialDay: View {
             }
         }
     }
-    
     func modifySpecialDayView<Content: View>(
         model: CalendarModel.Day,
         @ViewBuilder content: () -> Content
@@ -221,7 +226,7 @@ extension Dictionary where Key == Date?, Value == String {
             }
         }
     }
-        
+    
     func contains(date: Date) -> Bool {
         self.contains { element in
             element.key ==  date

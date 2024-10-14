@@ -89,6 +89,12 @@ struct OBCalendarWithSpecialDay: View {
                 }
                 Divider()
                 daysView
+                
+                if !specialDays.isEmpty {
+                    makeSpecialDaysView(year: model.year.year, month: model.month)
+                        .frame(maxWidth: .infinity,alignment: .leading)
+                        .padding()
+                }
             }
             .padding(4)
         } yearContent: { model, scrollProxy, monthsView in
@@ -142,7 +148,7 @@ struct OBCalendarWithSpecialDay: View {
                         HStack {
                             Image(systemName: "circle.fill")
                                 .resizable()
-                                .frame(width: 12, height: 12)
+                                .frame(width: 8, height: 8)
                                 .aspectRatio(contentMode: .fit)
                                 .foregroundColor(.red)
                             Text(specialDay.value)

@@ -132,6 +132,27 @@ struct OBCalendarWithSpecialDay: View {
         return reorderedShortWeekdays
     }
     
+    func makeSpecialDaysView(year: Int, month: CalendarModel.Month) -> some View {
+        contentBuilder {
+            if specialDays.yearExist(year: year, calendar: calendar) {
+                ForEach(month.days.indices, id: \.self) { index in
+                    let day = month.days[index]
+                    if case .insideRange(.currentMonth) = day.rangeType,
+                       let specialDay = specialDays.get(year: year, month: month.month, day: day.day, calendar: calendar){
+                        HStack {
+                            Image(systemName: "circle.fill")
+                                .resizable()
+                                .frame(width: 12, height: 12)
+                                .aspectRatio(contentMode: .fit)
+                                .foregroundColor(.red)
+                            Text(specialDay.value)
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
     
     func modifyDayView<Content: View>(
         model: CalendarModel.Day,
