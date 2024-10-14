@@ -1,0 +1,55 @@
+@Tutorial(time: 15) {
+    @Intro(title: "Implement Single Date Selection") {
+        Implement single date selection for users can select specific date
+        
+<!--        @Image(source: <#file#>, alt: "<#accessible description#>")-->
+    }
+    
+    @Section(title: "Implement Single Date Selection") {
+        @ContentAndMedia {
+            Add
+            
+<!--            @Image(source: <#file#>, alt: "<#accessible description#>")-->
+        }
+        
+        @Steps {
+            @Step {
+                Look at latest state of previous chapter
+                
+                @Code(name:"OBCalendarDemo.swift",
+                    file:c3-t1-s1-step1.swift)  {
+                    @Image(source: c3-t1-s1-step1.png, alt: "desc")
+                }
+            }
+            
+            @Step {
+                Add a `firstSelectedDate` variable to hold the date selected by the user. 
+                
+                In addition, when you tap any `dayView` this date assing to `firstSelectedDate`
+                @Code(name:"OBCalendarDemo.swift",
+                    file:c3-t1-s1-step2.swift)  {
+                    @Image(source: c3-t1-s1-step2.png, alt: "desc")
+                }
+            } 
+            @Step {
+                Change the background of `dayView` based on whether the `firstSelectedDate` is equal to the date of `dayView`.
+                
+                @Code(name:"OBCalendarDemo.swift",
+                    file:c3-t1-s1-step3.swift)  {
+                    @Image(source: c3-t1-s1-step3.png, alt: "desc")
+                }
+            } 
+
+            
+            @Step {
+                It would be better to set the text color to white when a `dayView` is selected.
+                
+                @Code(name:"OBCalendarDemo.swift",
+                    file:c3-t1-s1-step4.swift)  {
+                    @Image(source: c3-t1-s1-step4.png, alt: "desc")
+                }
+            }
+
+        }
+    }
+}

@@ -1,0 +1,76 @@
+@Tutorial(time: 30) {
+    @Intro(title: "Implement Double Date Selection") {
+        Some Text
+        
+<!--        @Image(source: <#file#>, alt: "<#accessible description#>")-->
+    }
+    
+    @Section(title: "Implement Double Date Selection") {
+        @ContentAndMedia {
+            Add
+            
+<!--            @Image(source: <#file#>, alt: "<#accessible description#>")-->
+        }
+        
+        @Steps {
+            @Step {
+                Look at latest state of previous tutorial. Copy it and paste to file that name is `OBCalendarDemoDoubleSelection.swift`
+                
+                @Code(name:"OBCalendarDemoDoubleSelection.swift",
+                    file:c3-t3-s1-step1.swift)  {
+                    @Image(source: c3-t3-s1-step1.png, alt: "desc")
+                }
+            }
+            @Step {
+                Create a variable `secondSelectedDate` to hold user's date selection and update `selectDate(of)` function to select double date 
+                
+                @Code(name:"OBCalendarDemoDoubleSelection.swift",
+                    file:c3-t3-s1-step2.swift)  {
+                    @Image(source: c3-t3-s1-step2.png, alt: "desc")
+                }
+            }
+            @Step {
+                Create `modifySelectedDayView(date:content:)`  to edit selected days (`firstSelectedDay` and `secondSelectedDay`)      
+                @Code(name:"OBCalendarDemoDoubleSelection.swift",
+                    file:c3-t3-s1-step3.swift)  {
+                    @Image(source: c3-t3-s1-step3.png, alt: "desc")
+                }
+            }
+            @Step {
+                Use `modifySelectedDayView function` in `modifyDayView`
+                
+                @Code(name:"OBCalendarDemoDoubleSelection.swift",
+                    file:c3-t3-s1-step4.swift)  {
+                    @Image(source: c3-t3-s1-step4.png, alt: "desc")
+                }
+            } 
+            @Step {
+                Create `modifyBetweenSelectedDateView(date:content:) function ` to edit selected between days
+                
+                @Code(name:"OBCalendarDemoDoubleSelection.swift",
+                    file:c3-t3-s1-step5.swift)  {
+                    @Image(source: c3-t3-s1-step5.png, alt: "desc")
+                }
+            }
+            @Step {
+                Use `modifyBetweenSelectedDateView(date:content:) function ` in `modifyDayView`
+                
+                @Code(name:"OBCalendarDemoDoubleSelection.swift",
+                    file:c3-t3-s1-step6.swift)  {
+                    @Image(source: c3-t3-s1-step6.png, alt: "desc")
+                }
+            }
+            @Step {
+                Update `modifySelectedDayView`
+                
+                Create `RoundedCornerShape` structure to help
+                
+                @Code(name:"OBCalendarDemoDoubleSelection.swift",
+                    file:c3-t3-s1-step7.swift)  {
+                    @Image(source: c3-t3-s1-step7.png, alt: "desc")
+                }
+            }
+ 
+        }
+    }
+}
