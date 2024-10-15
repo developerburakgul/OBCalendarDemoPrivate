@@ -9,7 +9,6 @@ Create custom calendars with ObiletCalendar.
         purpose: icon,
         source: "OBCalendarIcon",
         alt: "alt desc")
-    @PageColor(orange)
 }
 
 
