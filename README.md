@@ -2,7 +2,7 @@
 # OBCalendar
 
 
-- `OBCalendar` is designed to allow you to easily create your own custom calendars.With this structure, you can customize days, months, and years, and display days within specific ranges.
+- `OBCalendar` is designed to allow you to easily create your own custom calendars.With this structure, you can customize days, months, years. In additional you can change localization of calendar and display days within specific ranges.
 - Users set the `startDate` and `endDate` in `OBCalendar`, and the range is created automatically.
 
 
@@ -16,15 +16,19 @@
       <th>Standart Calendar</th>
       <th>Single Date Selection Calendar</th>
       <th>Double Date Selection Calendar</th>
-      <th>Special Day View Calendar</th>
-      <th>Localization Calendar</th>
     </tr>
     <tr>
-      <td><img width=250 src="https://github.com/developerburakgul/OBCalendarDemoPrivate/blob/main/Sources/OBCalendar/ObiletCalendar.docc/Resources/standartCalendar.png"></td>
-      <td><img width=250 src="https://github.com/developerburakgul/OBCalendarDemoPrivate/blob/main/Sources/OBCalendar/ObiletCalendar.docc/Resources/singleDateCalendar.png"></td>
-      <td><img width=250 src="https://github.com/developerburakgul/OBCalendarDemoPrivate/blob/main/Sources/OBCalendar/ObiletCalendar.docc/Resources/doubleDateCalendar.png"></td>
-      <td><img width=250 src="https://github.com/developerburakgul/OBCalendarDemoPrivate/blob/main/Sources/OBCalendar/ObiletCalendar.docc/Resources/specialDayCalendar.png"></td>
-      <td><img width=250 src="https://github.com/developerburakgul/OBCalendarDemoPrivate/blob/main/Sources/OBCalendar/ObiletCalendar.docc/Resources/localizationCalendar.png"></td>
+      <td><img width=300 src="https://github.com/developerburakgul/OBCalendarDemoPrivate/blob/main/Sources/OBCalendar/ObiletCalendar.docc/Resources/standartCalendar.png"></td>
+      <td><img width=300 src="https://github.com/developerburakgul/OBCalendarDemoPrivate/blob/main/Sources/OBCalendar/ObiletCalendar.docc/Resources/singleDateCalendar.png"></td>
+      <td><img width=300 src="https://github.com/developerburakgul/OBCalendarDemoPrivate/blob/main/Sources/OBCalendar/ObiletCalendar.docc/Resources/doubleDateCalendar.png"></td>
+    </tr>
+     <tr>
+        <th>Special Day View Calendar</th>
+        <th>Localization Calendar</th>
+      </tr>
+    <tr>
+     <td><img width=300 src="https://github.com/developerburakgul/OBCalendarDemoPrivate/blob/main/Sources/OBCalendar/ObiletCalendar.docc/Resources/specialDayCalendar.png"></td>
+      <td><img width=300 src="https://github.com/developerburakgul/OBCalendarDemoPrivate/blob/main/Sources/OBCalendar/ObiletCalendar.docc/Resources/localizationCalendar.png"></td>
     </tr>
   </table>
 </div>
