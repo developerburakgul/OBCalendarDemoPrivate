@@ -1,18 +1,49 @@
 # ``ObiletCalendar``
 
-ObiletCalendar ile kendi özel takvimlerinizi oluşturun.
+Create custom calendars with ObiletCalendar.
 
-iOS 14.0+ || MacOS 10+
+<!--Specify minimum versions -->
 
 @Metadata {
-   @PageKind(sampleCode)
-   @PageColor(red)
+    @PageImage(
+        purpose: icon,
+        source: "OBCalendarIcon",
+        alt: "alt desc")
+    @PageColor(orange)
 }
+
+
 
 ## Overview
 
-``OBCalendar`` creates Calendar based on  ``CalendarModel``
-![OBCalendar Icon](OBCalendarIcon)
+`ObiletCalendar` is designed to allow you to easily create your own custom calendars.
+With this structure, you can customize days, months, and years, and display days within specific ranges.
+
+For example you can create quickly standart calendar, you can select single date, double date calendar and you can create with special day calendar
+
+
+
+
+@TabNavigator {
+    
+    @Tab("Standart Calendar") {
+        ![ss for standar calendar](standartCalendar2)
+    }
+    
+    @Tab("Single Date Calendar") {
+        ![ss for single date calendar](singleDateCalendar2)
+    } 
+    
+    @Tab("Double Date Calendar") {
+        ![ss for double date calendar](doubleDateCalendar2)
+    } 
+    
+    @Tab("Special Day Calendar") {
+        ![ss for special day calendar](specialDayCalendar2)
+    }
+
+}
+
 
 ## Topics
 
@@ -21,10 +52,7 @@ iOS 14.0+ || MacOS 10+
 - <doc:GettingStarted>
 - <doc:/tutorials/ObiletCalendar>
 
-### Creating Calendar
 
-- ``OBCalendar``
 
-### Creating CalendarModel
 
-- ``CalendarModelBuilder``
+

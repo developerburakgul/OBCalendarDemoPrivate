@@ -5,9 +5,9 @@
 <!--        @Image(source: <#file#>, alt: "<#accessible description#>")-->
     }
     
-    @Section(title: "IDK") {
+    @Section(title: "Refactor") {
         @ContentAndMedia {
-            IDK Detail
+            Refactor to create double date selection
             
 <!--            @Image(source: <#file#>, alt: "<#accessible description#>")-->
         }

@@ -7,7 +7,7 @@
     
     @Section(title: "Implement Single Date Selection") {
         @ContentAndMedia {
-            Add
+            Add feature that select single date
             
 <!--            @Image(source: <#file#>, alt: "<#accessible description#>")-->
         }

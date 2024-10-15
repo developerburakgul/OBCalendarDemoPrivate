@@ -6,7 +6,7 @@
     @Chapter(name: "Create Demo Project") {
         Create OBCalendarDemo and skeleton of Calendar View
         
-        @Image(source: OBCalendarIcon, alt: "desc")
+<!--        @Image(source: OBCalendarIcon, alt: "desc")-->
         @TutorialReference(tutorial: "doc:SetupEmptyProject")
         @TutorialReference(tutorial: "doc:CreateSkeletonView")
     }
@@ -14,7 +14,7 @@
     @Chapter(name: "Improve User Interface") {
         Improve user interface
         
-        @Image(source: OBCalendarIcon, alt: "desc")
+<!--        @Image(source: OBCalendarIcon, alt: "desc")-->
         
         @TutorialReference(tutorial: "doc:ImproveUserInterface")
         @TutorialReference(tutorial: "doc:ChangeDayView")
@@ -22,7 +22,7 @@
     @Chapter(name: "Implement Date Selection") {
         Implementation one selection
         
-        @Image(source: OBCalendarIcon, alt: "desc")
+<!--        @Image(source: OBCalendarIcon, alt: "desc")-->
         
         @TutorialReference(tutorial: "doc:ImplementSingleDateSelection")
         @TutorialReference(tutorial: "doc:RefactorImplementSingleDateSelection")
@@ -31,7 +31,7 @@
     @Chapter(name: "Implement Special Day View") {
         Implement Special Day View
         
-        @Image(source: OBCalendarIcon, alt: "desc")
+<!--        @Image(source: OBCalendarIcon, alt: "desc")-->
         
        
         @TutorialReference(tutorial: "doc:ImplementSpecialDay")

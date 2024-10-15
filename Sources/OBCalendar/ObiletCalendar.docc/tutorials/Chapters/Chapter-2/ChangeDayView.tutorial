@@ -4,9 +4,9 @@
 <!--        @Image(source: <#file#>, alt: "<#accessible description#>")-->
     }
     
-    @Section(title: "Change") {
+    @Section(title: "Hide Some Days") {
         @ContentAndMedia {
-            Text
+            Hide day of previous and next month
 <!--            @Image(source: <#file#>, alt: "<#accessible description#>")-->
         }
         
