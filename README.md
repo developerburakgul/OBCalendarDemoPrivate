@@ -24,7 +24,7 @@ To integrate `OBCalendar` into your project using Swift Package Manager, follow 
 - ... bla bla
 
 ## Example Usage and Tutorial
-- You can visit for the <a href="https://docs.github.com/en/rest/users/users?apiVersion=2022-11-28" target="_blank">tutorial.</a> step by step
+- You can visit for the <a href="https://developerburakgul.github.io/OBCalendarDemoPrivate/tutorials/obiletcalendar" target="_blank">tutorial.</a> step by step
 
 
 
