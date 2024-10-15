@@ -1,20 +1,20 @@
 @Tutorial(time: 15) {
     @Intro(title: "Implement Single Date Selection") {
-        Implement single date selection for users can select specific date
+        Implement single date selection for users can select specific date.
         
 <!--        @Image(source: <#file#>, alt: "<#accessible description#>")-->
     }
     
     @Section(title: "Implement Single Date Selection") {
         @ContentAndMedia {
-            Add feature that select single date
+            Add feature that select single date.
             
 <!--            @Image(source: <#file#>, alt: "<#accessible description#>")-->
         }
         
         @Steps {
             @Step {
-                Look at latest state of previous chapter
+                Look at latest state of previous chapter.
                 
                 @Code(name:"OBCalendarDemo.swift",
                     file:c3-t1-s1-step1.swift)  {
@@ -25,7 +25,7 @@
             @Step {
                 Add a `firstSelectedDate` variable to hold the date selected by the user. 
                 
-                In addition, when you tap any `dayView` this date assing to `firstSelectedDate`
+                In addition, when you tap any `dayView` this date assing to `firstSelectedDate`.
                 @Code(name:"OBCalendarDemo.swift",
                     file:c3-t1-s1-step2.swift)  {
                     @Image(source: c3-t1-s1-step2.png, alt: "desc")

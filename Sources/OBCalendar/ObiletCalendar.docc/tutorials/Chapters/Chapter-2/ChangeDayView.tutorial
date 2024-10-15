@@ -6,13 +6,13 @@
     
     @Section(title: "Hide Some Days") {
         @ContentAndMedia {
-            Hide day of previous and next month
+            Hide day of previous and next month.
 <!--            @Image(source: <#file#>, alt: "<#accessible description#>")-->
         }
         
         @Steps {
             @Step {
-                Look at latest state of previous tutorial
+                Look at latest state of previous tutorial.
                 
                 @Code(name:"OBCalendarDemo.swift",
                     file:c2-t2-s1-step1.swift)  {

@@ -17,12 +17,14 @@
       <th>Single Date Selection Calendar</th>
       <th>Double Date Selection Calendar</th>
       <th>Special Day View Calendar</th>
+      <th>Localization Calendar</th>
     </tr>
     <tr>
       <td><img width=250 src="https://github.com/developerburakgul/OBCalendarDemoPrivate/blob/main/Sources/OBCalendar/ObiletCalendar.docc/Resources/standartCalendar.png"></td>
       <td><img width=250 src="https://github.com/developerburakgul/OBCalendarDemoPrivate/blob/main/Sources/OBCalendar/ObiletCalendar.docc/Resources/singleDateCalendar.png"></td>
       <td><img width=250 src="https://github.com/developerburakgul/OBCalendarDemoPrivate/blob/main/Sources/OBCalendar/ObiletCalendar.docc/Resources/doubleDateCalendar.png"></td>
       <td><img width=250 src="https://github.com/developerburakgul/OBCalendarDemoPrivate/blob/main/Sources/OBCalendar/ObiletCalendar.docc/Resources/specialDayCalendar.png"></td>
+      <td><img width=250 src="https://github.com/developerburakgul/OBCalendarDemoPrivate/blob/main/Sources/OBCalendar/ObiletCalendar.docc/Resources/localizationCalendar.png"></td>
     </tr>
   </table>
 </div>

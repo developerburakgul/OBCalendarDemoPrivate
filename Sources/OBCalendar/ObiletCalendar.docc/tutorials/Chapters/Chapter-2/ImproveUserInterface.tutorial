@@ -13,7 +13,7 @@
         @Steps {
             
             @Step {
-                Look at latest state of previous chapter
+                Look at latest state of previous chapter.
                 
                 @Code(name:"OBCalendarDemo.swift",
                     file:c2-t1-s1-step1.swift)  {
@@ -21,7 +21,7 @@
                 }
             } 
             @Step {
-                Add `daysView` and `getShortLocalizedWeekdays` function and use it
+                Add `daysView` and `getShortLocalizedWeekdays` function and use it.
                 
                 @Code(name:"OBCalendarDemo.swift",
                     file:c2-t1-s1-step2.swift)  {
@@ -29,7 +29,7 @@
                 }
             }
             @Step {
-                Add `headerView` and use it
+                Add `headerView` and use it.
                 
                 @Code(name:"OBCalendarDemo.swift",
                     file:c2-t1-s1-step3.swift)  {
@@ -37,7 +37,7 @@
                 }
             }
             @Step {
-                Change background color of `headerView`, add shadow to `daysView` and do some changes
+                Change background color of `headerView`, add shadow to `daysView` and do some changes.
                 
                 @Code(name:"OBCalendarDemo.swift",
                     file:c2-t1-s1-step4.swift)  {

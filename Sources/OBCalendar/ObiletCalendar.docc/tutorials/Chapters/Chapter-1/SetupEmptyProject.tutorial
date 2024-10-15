@@ -5,14 +5,14 @@
     
     @Section(title: "Create a new project and add ObiletCalendar") {
         @ContentAndMedia(layout:horizontal) {
-            Create and configure an Xcode project that uses ObiletCalendar
+            Create and configure an Xcode project that uses ObiletCalendar.
             
 <!--            @Image(source: CreateApp.png, alt: "For listen to descripiton")-->
         }
         
         @Steps {
             @Step {
-                Create a new project using the iOS App template. denmee
+                Create a new project using the iOS App template.
                 
                 @Image(source: c1-t1-s1-step1.png, alt: "desc")
             }
@@ -24,7 +24,7 @@
             }
             
             @Step {
-                Add 'ObiletCalendar' as a dependency to the project
+                Add 'ObiletCalendar' as a dependency to the project.
                 @Image(source: c1-t1-s1-step3.png,alt:"desc")
             }
         }

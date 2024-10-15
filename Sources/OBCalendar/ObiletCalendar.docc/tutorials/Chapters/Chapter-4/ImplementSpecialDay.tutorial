@@ -1,20 +1,20 @@
 @Tutorial(time: 10) {
     @Intro(title: "Implement Special Day ") {
-        Implement special day
+        Implement special day.
         
 <!--        @Image(source: <#file#>, alt: "<#accessible description#>")-->
     }
     
     @Section(title: "Implement Your Custom Special Day") {
         @ContentAndMedia {
-            Create your custom special day
+            Create your custom special day.
             
 <!--            @Image(source: <#file#>, alt: "<#accessible description#>")-->
         }
         
         @Steps {
             @Step {
-                Create `OBCalendarWithSpecialDay.swift` file
+                Create `OBCalendarWithSpecialDay.swift` file.
                 
                 @Code(name:"OBCalendarWithSpecialDay.swift",
                     file:c4-t1-s1-step1.swift)  {
@@ -32,7 +32,7 @@
                 }
             }
             @Step {
-                Create extension for dictionary to use for `specialDay`
+                Create extension for dictionary to use for `specialDay`.
                 
                 
                 @Code(name:"OBCalendarWithSpecialDay.swift",
@@ -41,9 +41,9 @@
                 }
             }   
             @Step {
-                Create `modifySpecialDayView(model:content:)` to create small heart in dayView
+                Create `modifySpecialDayView(model:content:)` to create small heart in dayView.
                 
-                Use `modifySpecialDayView(model:content:)` in dayView
+                Use `modifySpecialDayView(model:content:)` in dayView.
                 @Code(name:"OBCalendarWithSpecialDay.swift",
                     file:c4-t1-s1-step4.swift)  {
                     @Image(source: c4-t1-s1-step4.png, alt: "desc")
@@ -51,8 +51,7 @@
             }
             
             @Step {
-                Create `makeSpecialDaysView(year:month:)`
-                
+                Create `makeSpecialDaysView(year:month:)`.
                 
                 @Code(name:"OBCalendarWithSpecialDay.swift",
                     file:c4-t1-s1-step5.swift)  {
@@ -60,7 +59,7 @@
                 }
             }
             @Step {
-                Use `modifySpecialDayView(model:content:)` in dayView
+                Use `modifySpecialDayView(model:content:)` in dayView.
                 
                 
                 @Code(name:"OBCalendarWithSpecialDay.swift",
