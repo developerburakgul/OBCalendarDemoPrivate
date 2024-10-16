@@ -51,8 +51,6 @@ To integrate `OBCalendar` into your project using Swift Package Manager, follow 
 - Choose the package version or branch and click Add Package.
 
 ## Usage
-- You can create `OBCalendar` specifying `startingDate` and `endingDate`.
-
 ```swift
 let today = Date()
 let twoYearsLater = calendar.date(byAdding: .year, value: 2, to: today)!
@@ -68,6 +66,11 @@ return OBCalendar(startingDate: today, endingDate: twoYearsLater) { model, scrol
       monthsView
 }
 ```
+
+- You can create `OBCalendar` specifying `startingDate` and `endingDate`.
+- The first model consists of `CalendarModel.Year`, `CalendarModel.Month` and `CalendarModel.Day` and a view is created for each day using this model in the first block
+- The second model consists of `CalendarModel.Year` and `CalendarModel.Month`. In block 2, you can customize the view for each month by using this model and the collection of `day views` from the previous block and adding `daysView`.
+- The third model consists of `CalendarModel.Year`.  In block 3, using this model and the collection of `month views` from the previous block, `monthsView` is created and you can customize the view for each year by adding
 
 
 
