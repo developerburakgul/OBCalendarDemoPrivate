@@ -6,7 +6,7 @@
 - Users set the `startDate` and `endDate` in `OBCalendar`, and the range is created automatically.
 
 
-## Example Usage and Tutorial
+## Documentation and Tutorial
 - You can visit for the <a href="https://developerburakgul.github.io/OBCalendarDemoPrivate/documentation/obiletcalendar" target="_blank">documentation</a>
 - You can visit for the <a href="https://developerburakgul.github.io/OBCalendarDemoPrivate/tutorials/obiletcalendar" target="_blank">tutorial</a> step by step
 
@@ -49,6 +49,25 @@ To integrate `OBCalendar` into your project using Swift Package Manager, follow 
     https://github.com/oBilet/OBCalendar.git
     ```
 - Choose the package version or branch and click Add Package.
+
+## Usage
+- You can create `OBCalendar` specifying `startingDate` and `endingDate`.
+
+```swift
+let today = Date()
+let twoYearsLater = calendar.date(byAdding: .year, value: 2, to: today)!
+return OBCalendar(startingDate: today, endingDate: twoYearsLater) { model, scrollProxy in
+    // day view goes here
+    let day = model.day
+    Text("\(day.day)")
+} monthContent: { model, scrollProxy, daysView in
+    // month view goes here
+    daysView
+} yearContent: { model, scrollProxy, monthsView in
+    // year view goes here
+      monthsView
+}
+```
 
 
 
