@@ -184,8 +184,6 @@ struct OBCalendarDemoDoubleSelection: View {
             }else {
                 content()
             }
-            
-            
         }
     }
     

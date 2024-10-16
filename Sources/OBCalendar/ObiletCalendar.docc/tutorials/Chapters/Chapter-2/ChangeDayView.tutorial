@@ -1,4 +1,4 @@
-@Tutorial(time: 15) {
+@Tutorial(time: 3) {
     @Intro(title: "Change Day View ") {
         Change view of `day` by [Date Type](doc:ObiletCalendar/CalendarModel/Day/DateType) and [Range Type](doc:ObiletCalendar/CalendarModel/Day/RangeType) 
 <!--        @Image(source: <#file#>, alt: "<#accessible description#>")-->

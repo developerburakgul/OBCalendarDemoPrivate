@@ -1,4 +1,4 @@
-@Tutorial(time: 15) {
+@Tutorial(time: 10) {
     @Intro(title: "Implement Single Date Selection") {
         Implement single date selection for users can select specific date.
         

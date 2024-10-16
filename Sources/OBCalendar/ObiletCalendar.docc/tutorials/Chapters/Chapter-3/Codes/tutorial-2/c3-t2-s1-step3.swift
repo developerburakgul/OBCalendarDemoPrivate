@@ -161,7 +161,6 @@ struct OBCalendarDemo: View {
         }
     }
     
-    
     private func contentBuilder<Content: View>(@ViewBuilder content: () -> Content) -> Content {
         content()
     }

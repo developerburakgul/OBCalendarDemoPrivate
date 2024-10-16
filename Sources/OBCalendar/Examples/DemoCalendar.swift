@@ -162,66 +162,21 @@ struct DemoCalendar: View {
     }
     
     var calendarView: some View {
-        OBCalendar(
-            years: years
-        ) { model,scrollProxy in
-            
-            let dayView = modifyDayView(model: model.day) {
-                Text("\(model.day.day)")
-                    .frame(height: 35)
-                    .frame(maxWidth: .infinity)
-            }
-            .padding(.vertical, 4)
-            .onTapGesture {
-                if doubleSelection {
-                    selectDouble(date: model.day.date)
-                } else {
-                    selectSingle(date: model.day.date)
-                }
-            }
-            
-            
-            if case .insideRange(.currentMonth) = model.day.rangeType,
-               specialDays.contains(date: model.day.date),
-               specialDaysVisible {
-                dayView
-                    .overlay(
-                        VStack(alignment: .trailing) {
-                            Image(systemName: "circle.fill")
-                                .resizable()
-                                .frame(width: 6, height: 6)
-                                .foregroundColor(.blue)
-                                .frame(maxWidth: .infinity, alignment: .trailing)
-                            
-                            Spacer()
-                        }.padding(12)
-                    )
-            } else {
-                dayView
-            }
-            
+        let today = Date()
+        let twoYearsLater = calendar.date(byAdding: .year, value: 2, to: today)!
+        return OBCalendar(startingDate: today, endingDate: twoYearsLater) { model, scrollProxy in
+            // day view goes here
+            let day = model.day
+            Text("\(day.day)")
         } monthContent: { model, scrollProxy, daysView in
-            VStack {
-                HStack {
-                    Text(getMonthName(from: model.month.month))
-                    Text(formatYear(model.year.year))
-                }
-                .padding(8)
-                
-                Divider()
-                
-                daysView
-                
-                if specialDaysVisible {
-                    makeSpecialDaysView(year: model.year.year, month: model.month)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding()
-                }
-            }
-        } yearContent: { year, scrollProxy, monthsView in
+            // month view goes here
+            let modes = model
+            daysView
+        } yearContent: { model, scrollProxy, monthsView in
+            // year view goes here
             monthsView
-                .padding(.top, 8)
         }
+         
     }
     
     func makeSpecialDaysView(year: Int, month: CalendarModel.Month) -> some View {

@@ -1,4 +1,4 @@
-@Tutorial(time: 10) {
+@Tutorial(time: 7) {
     @Intro(title: "Implement Special Day ") {
         Implement special day.
         

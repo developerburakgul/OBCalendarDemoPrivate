@@ -1,4 +1,4 @@
-@Tutorial(time: 15) {
+@Tutorial(time: 5) {
     @Intro(title: "Improve User Interface") {
         Improve the user interface by adding weekdays and a header view.        
 <!--        @Image(source: <#file#>, alt: "<#accessible description#>")-->
