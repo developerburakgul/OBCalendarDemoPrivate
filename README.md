@@ -15,14 +15,14 @@
 <div align="center">
   <table>
     <tr>
-      <td><img width=300 src="https://github.com/developerburakgul/OBCalendarDemoPrivate/blob/main/Sources/OBCalendar/ObiletCalendar.docc/Resources/ForReadme/1.png"></td>
-      <td><img width=300 src="https://github.com/developerburakgul/OBCalendarDemoPrivate/blob/main/Sources/OBCalendar/ObiletCalendar.docc/Resources/ForReadme/2.png"></td>
-      <td><img width=300 src="https://github.com/developerburakgul/OBCalendarDemoPrivate/blob/main/Sources/OBCalendar/ObiletCalendar.docc/Resources/ForReadme/3.png"></td>
+      <td><img width=300 src="https://github.com/oBilet/OBCalendarDocument/blob/main/ObiletCalendar.doccarchive/images/obcalendar.ObiletCalendar/2.png"></td>
+      <td><img width=300 src="https://github.com/oBilet/OBCalendarDocument/blob/main/ObiletCalendar.doccarchive/images/obcalendar.ObiletCalendar/5.png"></td>
+      <td><img width=300 src="https://github.com/oBilet/OBCalendarDocument/blob/main/ObiletCalendar.doccarchive/images/obcalendar.ObiletCalendar/3.png"></td>
     </tr>
     <tr>
-     <td><img width=300 src="https://github.com/developerburakgul/OBCalendarDemoPrivate/blob/main/Sources/OBCalendar/ObiletCalendar.docc/Resources/ForReadme/4.png"></td>
-      <td><img width=300 src="https://github.com/developerburakgul/OBCalendarDemoPrivate/blob/main/Sources/OBCalendar/ObiletCalendar.docc/Resources/ForReadme/5.png"></td>
-      <td><img width=300 src="https://github.com/developerburakgul/OBCalendarDemoPrivate/blob/main/Sources/OBCalendar/ObiletCalendar.docc/Resources/ForReadme/6.png"></td>
+     <td><img width=300 src="https://github.com/oBilet/OBCalendarDocument/blob/main/ObiletCalendar.doccarchive/images/obcalendar.ObiletCalendar/4.png"></td>
+      <td><img width=300 src="https://github.com/oBilet/OBCalendarDocument/blob/main/ObiletCalendar.doccarchive/images/obcalendar.ObiletCalendar/6.png"></td>
+      <td><img width=300 src="https://github.com/oBilet/OBCalendarDocument/blob/main/ObiletCalendar.doccarchive/images/obcalendar.ObiletCalendar/1.png"></td>
     </tr>
   </table>
 </div>
