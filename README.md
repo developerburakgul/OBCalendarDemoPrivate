@@ -15,14 +15,14 @@
 <div align="center">
   <table>
     <tr>
-      <td><img width=300 src="https://github.com/oBilet/OBCalendarDocument/blob/main/ObiletCalendar.doccarchive/images/obcalendar.ObiletCalendar/2.png"></td>
-      <td><img width=300 src="https://github.com/oBilet/OBCalendarDocument/blob/main/ObiletCalendar.doccarchive/images/obcalendar.ObiletCalendar/5.png"></td>
-      <td><img width=300 src="https://github.com/oBilet/OBCalendarDocument/blob/main/ObiletCalendar.doccarchive/images/obcalendar.ObiletCalendar/3.png"></td>
+      <td><img width=300 src="https://github.com/oBilet/OBCalendarDocument/blob/main/ObiletCalendar.doccarchive/images/obcalendar.ObiletCalendar/firstSS.png"></td>
+      <td><img width=300 src="https://github.com/oBilet/OBCalendarDocument/blob/main/ObiletCalendar.doccarchive/images/obcalendar.ObiletCalendar/secondSS.png"></td>
+      <td><img width=300 src="https://github.com/oBilet/OBCalendarDocument/blob/main/ObiletCalendar.doccarchive/images/obcalendar.ObiletCalendar/thirdSS.png"></td>
     </tr>
     <tr>
-     <td><img width=300 src="https://github.com/oBilet/OBCalendarDocument/blob/main/ObiletCalendar.doccarchive/images/obcalendar.ObiletCalendar/4.png"></td>
-      <td><img width=300 src="https://github.com/oBilet/OBCalendarDocument/blob/main/ObiletCalendar.doccarchive/images/obcalendar.ObiletCalendar/6.png"></td>
-      <td><img width=300 src="https://github.com/oBilet/OBCalendarDocument/blob/main/ObiletCalendar.doccarchive/images/obcalendar.ObiletCalendar/1.png"></td>
+     <td><img width=300 src="https://github.com/oBilet/OBCalendarDocument/blob/main/ObiletCalendar.doccarchive/images/obcalendar.ObiletCalendar/fourthSS.png"></td>
+      <td><img width=300 src="https://github.com/oBilet/OBCalendarDocument/blob/main/ObiletCalendar.doccarchive/images/obcalendar.ObiletCalendar/fifthSS.png"></td>
+      <td><img width=300 src="https://github.com/oBilet/OBCalendarDocument/blob/main/ObiletCalendar.doccarchive/images/obcalendar.ObiletCalendar/sixthSS.png"></td>
     </tr>
   </table>
 </div>
