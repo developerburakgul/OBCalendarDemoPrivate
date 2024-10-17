@@ -15,20 +15,10 @@
 <div align="center">
   <table>
     <tr>
-      <th>Standart Calendar</th>
-      <th>Single Date Selection Calendar</th>
-      <th>Double Date Selection Calendar</th>
-    </tr>
-    <tr>
       <td><img width=300 src="https://github.com/developerburakgul/OBCalendarDemoPrivate/blob/main/Sources/OBCalendar/ObiletCalendar.docc/Resources/ForReadme/1.png"></td>
       <td><img width=300 src="https://github.com/developerburakgul/OBCalendarDemoPrivate/blob/main/Sources/OBCalendar/ObiletCalendar.docc/Resources/ForReadme/2.png"></td>
       <td><img width=300 src="https://github.com/developerburakgul/OBCalendarDemoPrivate/blob/main/Sources/OBCalendar/ObiletCalendar.docc/Resources/ForReadme/3.png"></td>
     </tr>
-     <tr>
-        <th>Special Day View Calendar</th>
-        <th>Localization Calendar</th>
-       <th>Localization Calendar2</th>
-      </tr>
     <tr>
      <td><img width=300 src="https://github.com/developerburakgul/OBCalendarDemoPrivate/blob/main/Sources/OBCalendar/ObiletCalendar.docc/Resources/ForReadme/4.png"></td>
       <td><img width=300 src="https://github.com/developerburakgul/OBCalendarDemoPrivate/blob/main/Sources/OBCalendar/ObiletCalendar.docc/Resources/ForReadme/5.png"></td>
